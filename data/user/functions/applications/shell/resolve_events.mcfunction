@@ -1,0 +1,1 @@
+execute as @e[tag=start_button_00] if data entity @s {ItemRotation:1b} run say Clicked!!
