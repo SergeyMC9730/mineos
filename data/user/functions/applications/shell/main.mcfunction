@@ -1,2 +1,3 @@
 function user:applications/shell/show_bg
-schedule function user:applications/shell/render_start 2t
+function user:applications/shell/showbuttons
+scoreboard players set mos shell_opened 1

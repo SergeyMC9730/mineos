@@ -1,4 +1,4 @@
-clone 1 -60 -66 1 -52 -80 2 -60 -80
+fill 2 -52 -66 2 -60 -80 minecraft:white_concrete
 
 function user:poweroff
 

@@ -1,0 +1,1 @@
+function user:applications/shell/show_taskbar_base

@@ -1,0 +1,2 @@
+execute if score mos shell_opened matches 1 run function user:applications/shell/render_start
+execute if score mos startmenu_opened matches 1 run function user:applications/shell/subapp_startmenu/render

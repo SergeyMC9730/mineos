@@ -7,6 +7,8 @@ summon minecraft:armor_stand 11 -60 -79 {NoAI:1b, Tags:["pointer1"]}
 summon minecraft:armor_stand 11 -60 -79 {NoAI:1b, Tags:["pointer2"]}
 summon minecraft:armor_stand 11 -60 -79 {NoAI:1b, Tags:["pointer3"]}
 fill 26 -61 -94 11 -61 -79 stone
+# video ram
+fill -17 -61 -33 -32 -61 -48 air
 scoreboard players set rax register 0
 scoreboard players set rbx register 0
 scoreboard players set rcx register 0
