@@ -55,6 +55,13 @@ fill -2 -60 -64 -2 -52 -50 minecraft:black_stained_glass
 
 fill -2 -59 -66 -2 -59 -80 minecraft:purple_wool
 setblock -2 -59 -66 minecraft:budding_amethyst
+setblock -2 -59 -78 minecraft:magenta_concrete
+setblock -2 -59 -77 minecraft:magenta_wool
+setblock -2 -59 -75 minecraft:magenta_wool
+fill -2 -59 -74 -2 -59 -73 minecraft:pink_concrete
+setblock -2 -59 -72 minecraft:magenta_wool
+setblock -2 -59 -70 minecraft:magenta_wool
+setblock -2 -59 -69 minecraft:magenta_concrete
 fill -1 -52 -50 -1 -60 -64 minecraft:purple_stained_glass
 
 ## controller
@@ -70,6 +77,16 @@ setblock 13 -55 -62 minecraft:bamboo_wall_sign[facing=east,waterlogged=false]{ba
 setblock 12 -56 -62 minecraft:command_block{Command:"function kernel:bootloader/acpi/poweroff"}
 setblock 12 -54 -62 minecraft:polished_blackstone_button[face=floor,facing=west,powered=false]
 
+setblock 12 -56 -64 minecraft:command_block[conditional=false,facing=east]{Command:"function kernel:drivers/battery_charge",CustomName:'{"text":"@"}',SuccessCount:0,TrackOutput:1b,UpdateLastExecution:1b,auto:0b,conditionMet:0b,powered:0b}
+setblock 12 -55 -64 minecraft:bone_block[axis=y]
+setblock 13 -55 -64 minecraft:bamboo_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['{"text":""}','{"text":""}','{"text":""}','{"text":""}']},front_text:{color:"black",has_glowing_text:0b,messages:['{"text":""}','{"text":"Battery"}','{"text":"charge"}','{"text":""}']},is_waxed:0b}
+setblock 12 -54 -64 minecraft:polished_blackstone_button[face=floor,facing=west,powered=false]
+
+setblock 12 -56 -66 minecraft:command_block[conditional=false,facing=east]{Command:"function kernel:drivers/battery_uncharge",CustomName:'{"text":"@"}',SuccessCount:0,TrackOutput:1b,UpdateLastExecution:1b,auto:0b,conditionMet:0b,powered:0b}
+setblock 13 -55 -66 minecraft:bamboo_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:['{"text":""}','{"text":""}','{"text":""}','{"text":""}']},front_text:{color:"black",has_glowing_text:0b,messages:['{"text":""}','{"text":"Battery"}','{"text":"discharge"}','{"text":""}']},is_waxed:0b}
+setblock 12 -55 -66 minecraft:bone_block[axis=y]
+setblock 12 -54 -66 minecraft:polished_blackstone_button[face=floor,facing=west,powered=false]
+
 ## kernel setup
 function kernel:bootloader/init
 
@@ -84,6 +101,15 @@ kill @e[type=armor_stand]
 # summon minecraft:armor_stand 11.5 -60.00 -78.5 {"Tags": ["pointer1"], CustomName: "1", CustomNameVisible: true}
 # summon minecraft:armor_stand 11.5 -60.00 -78.5 {"Tags": ["pointer2"], CustomName: "1", CustomNameVisible: true}
 # summon minecraft:armor_stand 11.5 -60.00 -78.5 {"Tags": ["pointer3"], CustomName: "1", CustomNameVisible: true}
+
+## sound data
+fill -12 -61 -48 -12 -61 -44 minecraft:oak_planks
+setblock -12 -60 -49 minecraft:redstone_wire[east=side,north=side,power=0,south=side,west=side]
+setblock -12 -60 -48 minecraft:note_block[instrument=bass,note=1,powered=false]
+setblock -12 -60 -47 minecraft:repeater[delay=2,facing=north,locked=false,powered=false]
+setblock -12 -60 -46 minecraft:note_block[instrument=bass,note=6,powered=false]
+setblock -12 -60 -45 minecraft:repeater[delay=4,facing=north,locked=false,powered=false]
+setblock -12 -60 -44 minecraft:note_block[instrument=bass,note=22,powered=false]
 
 ## misc
 gamerule doDaylightCycle false
